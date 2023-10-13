@@ -14,6 +14,7 @@ import PurchasesPage from "./Pages/PurchasesPage";
 import ProtectedRoutes from "./Pages/ProtectedRoutes";
 
 function App() {
+  const [colorTheme, setColorTheme] = useState("darkMode");
   const [sidebarActive, setSidebarActive] = useState("sidebarFalse");
 
   const dispatch = useDispatch();
@@ -31,8 +32,16 @@ function App() {
     }
   };
 
+  const handleColorTheme = () => {
+    if (colorTheme === "lightmode") {
+      setColorTheme("darkMode");
+    } else {
+      setColorTheme("lightMode");
+    }
+  };
+
   return (
-    <div className="app">
+    <div className={`app ${colorTheme}`}>
       <Header sidebarActive={sidebarActive} handleSidebar={handleSidebar} />
       <Routes>
         <Route path="/" element={<Home />} />

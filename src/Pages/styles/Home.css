@@ -9,10 +9,12 @@
     align-items: center;
     gap: 2em;
     position: relative;
+    
 }
 
 .home_title {
     text-align: center;
+    color: var(--title-color);
 }
 
 .productsearch_ipt {
@@ -33,7 +35,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px black;
+    color: var(--title-color);
+    background-color: var(--body-color);
+    border: solid 2px var(--first-color);
     border-radius: 50%;
     position: fixed;
     right: 20px;
@@ -46,7 +50,8 @@
 }
 
 .filters_container {
-    background-color: white;
+    background-color: var(--card-color);
+    color: var(--title-color);
     height: 100vh;
     width: 250px;
     display: flex;
@@ -72,7 +77,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px black;
+    color: var(--title-color);
+    background-color: var(--body-color);
+    border: solid 2px var(--first-color);
     border-radius: 50%;
     position: absolute;
     right: 20px;
@@ -109,7 +116,7 @@
 
     .productsearch_ipt {
         height: 35px;
-        width: 110%;
+        width: 100%;
     }
 
     .filter_btn {

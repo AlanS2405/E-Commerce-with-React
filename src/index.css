@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --color-first: #f85555;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
 }

@@ -24,7 +24,7 @@ const FilterCategory = () => {
 
   return (
     <article>
-      <h3>Categories</h3>
+      <h3>Categories:</h3>
       <ul>
         <li onClick={() => handleFilterCategory()}>All Categories</li>
         {categories?.map((category) => (

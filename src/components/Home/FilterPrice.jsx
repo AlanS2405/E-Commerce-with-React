@@ -22,7 +22,7 @@ const FilterPrice = ({ priceMinMax, setPriceMinMax }) => {
   return (
     <article>
       <form className="filterprice_container" onSubmit={handleSubmit(submit)}>
-        <h3>Filter price</h3>
+        <h3>Filter by price:</h3>
         <div className="filtercontainer_ipt_container">
           <input
             placeholder="From..."
@@ -41,7 +41,7 @@ const FilterPrice = ({ priceMinMax, setPriceMinMax }) => {
             id="to"
           />
         </div>
-        <button className="filterprice_btn">Filter Price</button>
+        <button className="filterprice_btn">Apply</button>
       </form>
       {priceMinMax.min !== 0 || priceMinMax.max !== Infinity ? (
         <p>

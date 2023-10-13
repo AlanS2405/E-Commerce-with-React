@@ -5,7 +5,7 @@
     position: fixed;
     right: -500px;
     z-index: 2000;
-    background-color: white;
+    background-color: var(--body-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +19,7 @@
 }
 
 .header_title {
+    color: var(--title-color);
     text-align: center;
     font-size: 1.3rem;
 }
@@ -35,6 +36,7 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+    color: var(--first-color);
 }
 
 .btn_close_sidebar {
@@ -43,7 +45,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px black;
+    color: var(--title-color);
+    background-color: var(--body-color);
+    border: solid 2px var(--first-color);
     border-radius: 50%;
     position: absolute;
     right: 20px;
@@ -66,6 +70,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 2em;
+        box-shadow: 0 .2rem 0.5rem rgba(0, 0, 0, 0.418);
+
     }
 
     .header_nav ul {
