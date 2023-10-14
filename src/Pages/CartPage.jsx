@@ -1,43 +1,39 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import CartElement from "../components/cart/CartElement";
 import usePurchase from "../hooks/usePurchase";
+import "./styles/CartPage.css";
 
 const CartPage = () => {
+  const cart = useSelector((states) => states.cart);
 
-    const cart = useSelector( states => states.cart)
+  const totalPrice = cart.reduce((acc, cv) => {
+    const subtotal = cv.quantity * cv.product.price;
+    return acc + subtotal;
+  }, 0);
 
-    const totalPrice = cart.reduce((acc, cv) => {
-      const subtotal = cv.quantity * cv.product.price
-      return acc + subtotal
-    }, 0)
+  const { makePurchase } = usePurchase();
 
-    const { makePurchase } = usePurchase()
-
-    const handlePurchase = () => {
-        makePurchase()
-    }
+  const handlePurchase = () => {
+    makePurchase();
+  };
 
   return (
-    <section>
-      <h2>Cart</h2>
+    <section className="cartPageContainer">
+      <h2 className="">Cart</h2>
       <div>
-          {
-            cart.map( prod => (
-              <CartElement 
-                key={prod.id}
-                prod={prod}
-              />
-            ))
-          }
+        {cart.map((prod) => (
+          <CartElement key={prod.id} prod={prod} />
+        ))}
       </div>
       <footer>
         <div>
-          <span>Total:</span><span>{totalPrice}</span>
+          <span>Total:</span>
+          <span>{totalPrice}</span>
         </div>
         <button onClick={handlePurchase}>Buy this products</button>
       </footer>
     </section>
-  )
-}
+  );
+};
 
-export default CartPage
+export default CartPage;

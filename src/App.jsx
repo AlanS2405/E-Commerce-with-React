@@ -48,7 +48,8 @@ function App() {
         <Route path="/product/:id" element={<ProductIDPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route element={ProtectedRoutes}>
+
+        <Route element={<ProtectedRoutes />}>
           <Route path="/cart" element={<CartPage />} />
           <Route path="/purchases" element={<PurchasesPage />} />
         </Route>
