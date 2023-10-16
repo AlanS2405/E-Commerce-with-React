@@ -1,0 +1,10 @@
+.cartElement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.elementImg {
+  width: 100px;
+  grid-column: ;
+}

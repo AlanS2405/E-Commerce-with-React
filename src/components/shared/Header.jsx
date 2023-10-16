@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/Header.css";
 
-const Header = ({ sidebarActive, handleSidebar }) => {
+const Header = ({ sidebarActive, handleSidebar, handleCartSidebar }) => {
   return (
     <header className={`header ${sidebarActive}`}>
       <h1 className="header_title">
-        <Link to="/">Academlo Techno Store</Link>
+        <Link to="/">Techno Store</Link>
       </h1>
       <nav className="header_nav">
         <ul>
@@ -21,9 +21,9 @@ const Header = ({ sidebarActive, handleSidebar }) => {
             </Link>
           </li>
           <li>
-            <Link className="link" to="/cart">
+            <button className="btnCart" onClick={handleCartSidebar}>
               <i className="bx bx-cart"></i> Cart
-            </Link>
+            </button>
           </li>
           <li>
             <Link className="link" to="/purchases">

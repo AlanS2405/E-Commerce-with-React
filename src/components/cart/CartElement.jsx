@@ -9,12 +9,10 @@ const CartElement = ({ prod }) => {
     dispatch(deleteCartThunk(prod.id));
   };
 
-  console.log(prod);
-
   return (
-    <article>
+    <article className="cartElement">
       <header>
-        <img src={prod.product.images[0].url} alt="" />
+        <img className="elementImg" src={prod.product.images[0].url} alt="" />
       </header>
       <section>
         <h3>{prod.product.title}</h3>
@@ -26,7 +24,7 @@ const CartElement = ({ prod }) => {
         </button>
       </section>
       <footer>
-        <span>Subtotal</span>
+        <span>Subtotal: </span>
         <span>{prod.quantity * prod.product.price}</span>
       </footer>
     </article>
